@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db534ec3c0c5d6443974712cba1e04c8, type: 3}
+  m_Name: NPC_1
+  m_EditorClassIdentifier: 
+  actor: {fileID: 7585309109532300071, guid: 27b08befd2ecc074db3f40b9ed32f9e5, type: 3}
+  speakerSprite: {fileID: -1618012929, guid: db8beadf5b2ede740957e35ee6102b43, type: 3}
+  sentence: 
+  dialogues:
+  - actorName: Woman
+    profile: {fileID: -674399349, guid: 6eb5e2dc87b0ed044b56b829a83e18b0, type: 3}
+    sentence:
+      portuguese: "Ol\xE1, voc\xEA viu a Donna por a\xED?"
+      english: 
+      spanish: 
+  - actorName: Traveler
+    profile: {fileID: -1618012929, guid: db8beadf5b2ede740957e35ee6102b43, type: 3}
+    sentence:
+      portuguese: 'Oi, quem seria essa tal de Donna? '
+      english: 
+      spanish: 
+  - actorName: Woman
+    profile: {fileID: -905462289, guid: 6eb5e2dc87b0ed044b56b829a83e18b0, type: 3}
+    sentence:
+      portuguese: "Donna \xE9 a minha gatinha. Voc\xEA poderia me ajudar? "
+      english: 
+      spanish: 
+  - actorName: Traveler
+    profile: {fileID: 0}
+    sentence:
+      portuguese: "Claro. Mas por onde eu poderia come\xE7ar a procurar?"
+      english: 
+      spanish: 
+  - actorName: Woman
+    profile: {fileID: 0}
+    sentence:
+      portuguese: "Ela sempre passeava por uma planta\xE7\xE3o ao norte. "
+      english: 
+      spanish: 
