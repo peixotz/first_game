@@ -5,6 +5,15 @@ using UnityEngine.UI;
 
 public class DialogueControl : MonoBehaviour
 {
+    [System.Serializable]
+    public enum idiom
+    {
+        pt,
+        eng,
+        spa
+    }
+
+    public idiom language;
 
     [Header("Components")]
     public GameObject dialogueObj; //Objeto janela do diálogo
@@ -16,7 +25,7 @@ public class DialogueControl : MonoBehaviour
     public float typingSpeed; //Velocidade da fala
 
     //Variável de controle
-    private bool isShowing; //Se a janela está visível.
+    public bool isShowing; //Se a janela está visível.
     private int index; //index das sentenças(fala, texto, etc)
     private string[] sentences;
 
@@ -56,7 +65,23 @@ public class DialogueControl : MonoBehaviour
     //Pular para a próxima frase/fala
     public void NextSentence()
     {
-
+        if(speechText.text == sentences[index])
+        {
+            if(index < sentences.Length - 1)
+            {
+                index++;
+                speechText.text = "";
+                StartCoroutine(TypeSentence());
+            }
+            else
+            {
+                speechText.text = "";
+                index = 0;
+                dialogueObj.SetActive(false);
+                sentences = null;
+                isShowing = false;
+            }
+        }
     }
 
     // Chamar a fala do NPC
